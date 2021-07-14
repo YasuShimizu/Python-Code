@@ -50,7 +50,7 @@ while(time<=etime):
     ims.append(im)
 
 ani = animation.ArtistAnimation(fig, ims, interval=50)
-#plt.show()
+plt.show()
 #ani.save('cip.gif',writer='imagemagick')
 ani.save('cip.mp4',writer='ffmpeg')
 
