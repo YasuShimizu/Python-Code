@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.animation import PillowWriter
 from matplotlib._version import get_versions as mplv
-from scipy.stats import gaussian_kde
 
 fig=plt.figure()
 
@@ -49,10 +48,10 @@ while(time<=etime):
     im=plt.plot(x,f,'blue');
     ims.append(im)
 
-ani = animation.ArtistAnimation(fig, ims, interval=50)
+ani = animation.ArtistAnimation(fig, ims, interval=10)
 plt.show()
 #ani.save('cip.gif',writer='imagemagick')
-ani.save('cip.mp4',writer='ffmpeg')
+#ani.save('cip.mp4',writer='ffmpeg')
 
 
         
