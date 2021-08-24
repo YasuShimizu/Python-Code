@@ -38,12 +38,10 @@ while(time<=etime):
 #        fn[i]=f[i]-c*(f[i+1]-f[i-1])/(2.*dx)*dt \
 #            -abs(c)*(-f[i+1]+2.*f[i]-f[i-1])/(2.*dx)*dt # 1st order upwind
 
-# K-K Scheme 
-#        fn[i]=f[i]-c*(-f[i+2]+8.*(f[i+1]-f[i-1])+f[i+2])/(12.*dx)*dt \
-#            -abs(c)*(f[i+2]-4.*f[i+1]+6.*f[i]-4.*f[i-1]+f[i-2])/(12.*dx)*dt 
+
 
 # Quick Scheme 
-        fn[i]=f[i]-c*(-f[i+2]+10.*(f[i+1]-f[i-1])+f[i+2])/(16.*dx)*dt \
+        fn[i]=f[i]-c*(-f[i+2]+10.*(f[i+1]-f[i-1])+f[i-2])/(16.*dx)*dt \
             -abs(c)*(f[i+2]-4.*f[i+1]+6.*f[i]-4.*f[i-1]+f[i-2])/(16.*dx)*dt 
 
     f=copy.copy(fn)
