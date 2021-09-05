@@ -61,16 +61,9 @@ while time<=etime:
                 f0[i,j]=(rb-r)/rb*fp
             else:
                 f0[i,j]=0.
-#    while theta>2.*np.pi:
-#        theta=theta-2.*np.pi
+
     u=-uv*np.sin(theta); v=uv*np.cos(theta)
-#    print(time,theta,u,v)
-#    for i in np.arange(0,nx):
-#        for j in np.arange(0,ny): 
-#            fn[i,j]=f[i,j]-dt/2.*(   \
-#                ((u+abs(u))*(f[i,j]-f[i-1,j])+(u-abs(u))*(f[i+1,j]-f[i,j]))/dx  \
-#               +((v+abs(v))*(f[i,j]-f[i,j-1])+(v-abs(v))*(f[i,j+1]-f[i,j]))/dy)
-#    f=copy.copy(fn)
+
     if (icount % fskip) == 0:
         nfile=nfile+1
         fig = plt.figure(figsize=(25, 10), dpi=100)
