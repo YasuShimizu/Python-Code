@@ -7,7 +7,7 @@ import copy
 
 fig=plt.figure()
 
-xl=100; nx=201; c=0.5
+xl=100; nx=201; c=-0.5
 xb=10;xp=xl-xb;fp=0.5
 etime=10;dt=0.01
 
@@ -36,7 +36,7 @@ time=0
 icount=0; fskip=10
 while(time<=etime):
     for i in range(2,nx-1):
-        fn[i]=f[i]-c*(f[i+1]-f[i])*dt/dx
+        fn[i]=f[i]-c*(f[i]-f[i-1])*dt/dx
 
     f=copy.copy(fn)
     icount=icount+1
