@@ -39,7 +39,7 @@ time=0
 while(time<=etime):
     u=u0*np.sin(2.*np.pi/tl*time)
 #    u=u0
-# Diffusion 
+# Diffusion (Non Advection)
     for i in np.arange(2,nx-1):
         fn[i]=f[i]+d*(f[i+1]-2.*f[i]+f[i-1])*dt/dx**2
 
